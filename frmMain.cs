@@ -45,7 +45,7 @@ namespace PasswordCheck
             bool MatchFound = false;
             int MatchCount = 0;
             // Grab the first 5 characters
-            var h = HashString(textBox2.Text);
+            var h = HashString(PasswordBox.Text);
             var c = new string(h.Take(5).ToArray());
 
 
@@ -78,7 +78,9 @@ namespace PasswordCheck
                 }
             }
             if (MatchFound)
-                MessageBox.Show($"The password you entered has been found in a list of passwords that are known to be compromised.\n\nCCP would HIGHLY recommend performing a password change anywhere this has been used as the password is no longer considered secure.\n\nYour password was listed {MatchCount} times.", $"Password Found in Dataset!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"The password you entered has been found in a list of passwords that are known to be compromised.\n\nCCP would HIGHLY recommend performing a password change anywhere this has been used as the password is no longer considered secure.\n\nYour password was listed {MatchCount} times.", $"Password Found in Dataset!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+                MessageBox.Show($"Congratulations! Your password is not listed in any known breaches.", $"Password NOT Found in Dataset", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

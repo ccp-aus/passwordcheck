@@ -29,70 +29,74 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Logo = new System.Windows.Forms.PictureBox();
+            this.DescriptionBox = new System.Windows.Forms.TextBox();
+            this.PasswordBox = new System.Windows.Forms.TextBox();
+            this.CheckPassword = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // Logo
             // 
-            this.pictureBox1.Image = global::CCP.PasswordCheck.Properties.Resources.ccplogo;
-            this.pictureBox1.Location = new System.Drawing.Point(658, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.Logo.Image = global::CCP.PasswordCheck.Properties.Resources.ccplogo;
+            this.Logo.Location = new System.Drawing.Point(388, 12);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(140, 132);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
             // 
-            // textBox1
+            // DescriptionBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(630, 47);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.DescriptionBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DescriptionBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DescriptionBox.Cursor = System.Windows.Forms.Cursors.Default;
+            this.DescriptionBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptionBox.Location = new System.Drawing.Point(12, 12);
+            this.DescriptionBox.Multiline = true;
+            this.DescriptionBox.Name = "DescriptionBox";
+            this.DescriptionBox.ReadOnly = true;
+            this.DescriptionBox.Size = new System.Drawing.Size(370, 89);
+            this.DescriptionBox.TabIndex = 1;
+            this.DescriptionBox.TabStop = false;
+            this.DescriptionBox.Text = resources.GetString("DescriptionBox.Text");
             // 
-            // textBox2
+            // PasswordBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(22, 65);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(443, 20);
-            this.textBox2.TabIndex = 2;
+            this.PasswordBox.Location = new System.Drawing.Point(12, 107);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.PasswordChar = '*';
+            this.PasswordBox.Size = new System.Drawing.Size(370, 20);
+            this.PasswordBox.TabIndex = 2;
             // 
-            // button1
+            // CheckPassword
             // 
-            this.button1.Location = new System.Drawing.Point(471, 63);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 43);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.CheckPassword_click);
+            this.CheckPassword.Location = new System.Drawing.Point(12, 133);
+            this.CheckPassword.Name = "CheckPassword";
+            this.CheckPassword.Size = new System.Drawing.Size(370, 43);
+            this.CheckPassword.TabIndex = 3;
+            this.CheckPassword.Text = "Check Password";
+            this.CheckPassword.UseVisualStyleBackColor = true;
+            this.CheckPassword.Click += new System.EventHandler(this.CheckPassword_click);
             // 
             // frmMain
             // 
+            this.AcceptButton = this.CheckPassword;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 132);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(540, 184);
+            this.Controls.Add(this.CheckPassword);
+            this.Controls.Add(this.PasswordBox);
+            this.Controls.Add(this.DescriptionBox);
+            this.Controls.Add(this.Logo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CCP Password Checker";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,10 +104,10 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.TextBox DescriptionBox;
+        private System.Windows.Forms.TextBox PasswordBox;
+        private System.Windows.Forms.Button CheckPassword;
     }
 }
 
