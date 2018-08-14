@@ -1,5 +1,6 @@
 # CCP Password and Email Breach Checker
-[![Build status](https://ci.appveyor.com/api/projects/status/kiwninoh7iwpxb5j/branch/master?svg=true)](https://ci.appveyor.com/project/ccp-aus/passwordcheck/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/kiwninoh7iwpxb5j/branch/master?svg=true)](https://ci.appveyor.com/project/ccp-aus/passwordcheck/branch/master) [![Release](https://img.shields.io/github/release/ccp-aus/passwordcheck.svg)](https://github.com/ccp-aus/passwordcheck/releases)
+
 ## Overview
 This tool was primarily written for customers of CCP in Perth, Australia so that they can check their passwords and email addresses for any potential data breaches that may warrant password changes or extra security measures. It has been released open source as a trust gesture to show anyone that's interested that there's no transmission of any passwords to any 3rd party services.
 
