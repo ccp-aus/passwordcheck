@@ -12,5 +12,7 @@ Uses the Have I Been Pwned website API's range method to submit the bare minimum
 
 More information can be found here: https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/
 
+*While we added a "Show Passwords" eye icon to enable users to check what they've typed in, please be advised that security is still important and to make sure nobody is looking over your shoulder when you use it.*
+
 ## Email Check
 Just a simple email address check. It uses the Have I Been Pwned API to again submit the email address and gets a result. If there are breaches detected, users are offered the option to load the Have I been Pwned web page to get more information.
