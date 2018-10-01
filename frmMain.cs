@@ -142,7 +142,7 @@ namespace PasswordCheck
 
         private void radioShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            PasswordBox.PasswordChar = radioShowPassword.Checked ? '\0' : '*';
+            PasswordBox.PasswordChar = radioShowPassword.Checked ? '\0' : '●';
             radioShowPassword.BackgroundImage = radioShowPassword.Checked ? global::CCP.PasswordCheck.Properties.Resources.icons8_show_password_filled_50 : global::CCP.PasswordCheck.Properties.Resources.icons8_show_password_50;
         }
 
