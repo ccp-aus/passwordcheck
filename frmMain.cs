@@ -139,5 +139,32 @@ namespace PasswordCheck
             if (e.KeyCode == Keys.Enter)
                 CheckPassword_click(this, new EventArgs());
         }
+
+        private void radioShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            PasswordBox.PasswordChar = radioShowPassword.Checked ? '\0' : '*';
+            radioShowPassword.BackgroundImage = radioShowPassword.Checked ? global::CCP.PasswordCheck.Properties.Resources.icons8_show_password_filled_50 : global::CCP.PasswordCheck.Properties.Resources.icons8_show_password_50;
+        }
+
+        private void radioShowPassword_Click(object sender, EventArgs e)
+        {
+            //radioShowPassword.Checked = (!radioShowPassword.Checked);
+        }
+
+        private void radioShowPassword_MouseDown(object sender, MouseEventArgs e)
+        {
+            radioShowPassword.Checked = true;
+        }
+
+        private void radioShowPassword_MouseUp(object sender, MouseEventArgs e)
+        {
+            radioShowPassword.Checked = false;
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            radioShowPassword.Appearance = Appearance.Button;
+
+        }
     }
 }

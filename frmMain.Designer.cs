@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            this.Logo = new System.Windows.Forms.PictureBox();
             this.CheckPassword = new System.Windows.Forms.Button();
             this.DescriptionBox = new System.Windows.Forms.TextBox();
             this.PasswordBox = new System.Windows.Forms.TextBox();
@@ -38,21 +37,12 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+            this.radioShowPassword = new System.Windows.Forms.RadioButton();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Logo
-            // 
-            this.Logo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Logo.Image = global::CCP.PasswordCheck.Properties.Resources.ccplogo;
-            this.Logo.Location = new System.Drawing.Point(815, 0);
-            this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(140, 208);
-            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Logo.TabIndex = 0;
-            this.Logo.TabStop = false;
             // 
             // CheckPassword
             // 
@@ -83,8 +73,8 @@
             // 
             this.PasswordBox.Location = new System.Drawing.Point(14, 114);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(370, 20);
+            this.PasswordBox.PasswordChar = '●';
+            this.PasswordBox.Size = new System.Drawing.Size(344, 20);
             this.PasswordBox.TabIndex = 5;
             this.PasswordBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordBox_KeyDown);
             // 
@@ -123,6 +113,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioShowPassword);
             this.groupBox1.Controls.Add(this.DescriptionBox);
             this.groupBox1.Controls.Add(this.PasswordBox);
             this.groupBox1.Controls.Add(this.CheckPassword);
@@ -145,6 +136,39 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Email Check";
             // 
+            // radioShowPassword
+            // 
+            this.radioShowPassword.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioShowPassword.AutoCheck = false;
+            this.radioShowPassword.BackgroundImage = global::CCP.PasswordCheck.Properties.Resources.icons8_show_password_50;
+            this.radioShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.radioShowPassword.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radioShowPassword.FlatAppearance.BorderSize = 0;
+            this.radioShowPassword.FlatAppearance.CheckedBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radioShowPassword.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radioShowPassword.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radioShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioShowPassword.Location = new System.Drawing.Point(364, 114);
+            this.radioShowPassword.Name = "radioShowPassword";
+            this.radioShowPassword.Size = new System.Drawing.Size(20, 20);
+            this.radioShowPassword.TabIndex = 7;
+            this.radioShowPassword.UseVisualStyleBackColor = false;
+            this.radioShowPassword.CheckedChanged += new System.EventHandler(this.radioShowPassword_CheckedChanged);
+            this.radioShowPassword.Click += new System.EventHandler(this.radioShowPassword_Click);
+            this.radioShowPassword.MouseDown += new System.Windows.Forms.MouseEventHandler(this.radioShowPassword_MouseDown);
+            this.radioShowPassword.MouseUp += new System.Windows.Forms.MouseEventHandler(this.radioShowPassword_MouseUp);
+            // 
+            // Logo
+            // 
+            this.Logo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Logo.Image = global::CCP.PasswordCheck.Properties.Resources.ccplogo;
+            this.Logo.Location = new System.Drawing.Point(815, 0);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(140, 208);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 0;
+            this.Logo.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,11 +184,12 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CCP Password Checker";
-            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,6 +205,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.RadioButton radioShowPassword;
     }
 }
 
